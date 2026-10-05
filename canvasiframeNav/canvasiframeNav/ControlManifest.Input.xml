@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="GPTech" constructor="CanvasNavIframe" version="7.0.0" display-name-key="CanvasNavIframe" description-key="Canvas Navigation Iframe Control v7" control-type="standard">
+
+    <!-- Input property: URL of the HTML page to show in the iframe -->
+    <property name="template"
+              display-name-key="Template URL"
+              description-key="Full URL of the HTML page to embed"
+              usage="bound"
+              of-type="SingleLine.Text"
+              required="true" />
+
+    <!-- Output property: tab key + timestamp sent when a tab is clicked (e.g., home|172789123456) -->
+    <property name="GP_lastClickedPage"
+              display-name-key="GP Last Clicked Page"
+              description-key="Output tab key with timestamp (e.g., home|172789123456)"
+              usage="output"
+              of-type="SingleLine.Text"
+              required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>
