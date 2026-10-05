@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="GPTech" constructor="RiseIframe" version="2.0.0"
+           display-name-key="RiseIframe"
+           description-key="Rise Iframe control v1"
+           control-type="standard">
+
+    <property name="template"
+              display-name-key="Template URL"
+              description-key="Full URL of the HTML page to embed"
+              usage="bound"
+              of-type="SingleLine.Text"
+              required="true" />
+
+    <property name="GP_lastClickedPage"
+              display-name-key="GP Last Clicked Page"
+              description-key="Tab key plus timestamp, e.g. home|1727891234567"
+              usage="output"
+              of-type="SingleLine.Text"
+              required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>
+
+
